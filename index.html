@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Receipt Generator</title>
+</head>
+<body>
+    <div class="receipt-container">
+        <h1>MASJID-E-KHASIMIAH <br> <u>Receipt Generator</u></h1>
+        <form id="receiptForm">
+            <label for="receiptNumber">Receipt Number:</label>
+            <input type="text" id="receiptNumber" readonly>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <span id="dateError" class="error-message"></span>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <span id="nameError" class="error-message"></span>
+
+            <label for="amount">Amount (₹):</label>
+            <input type="number" id="amount" required>
+            <span id="amountError" class="error-message"></span>
+
+            <label for="payment">Payment mode:</label>
+            <select id="payment" required>
+            <option value="Cash">Cash</option>
+            <option value="Online">UPI - Online</option>
+            </select>
+
+            <label for="towards">Towards:</label>
+            <select id="towards" required>
+            <option value="Masjid chanda">Masjid Chanda</option>
+            <option value="Zakaat">Zakaat</option>
+            <option value="Ramadan">Ramadan</option>
+            </select>
+
+            <label for="receivedby">Received By:</label>
+            <input type="text" id="receivedby" required>
+            <span id="receivedbyError" class="error-message"></span>
+
+            <button type="button" onclick="generateAndSaveReceipt()">Generate Receipt</button> <br>
+        </form><br>
+
+        <div id="generatedReceipt"></div>
+        <button type="button" id="downloadButton" onclick="downloadReceipt()">Download Receipt</button><br>
+        <button type="button" onclick="refreshPage()">Refresh Page</button><br>
+        <button style="background-color: red;"  type="button" onclick="resetReceiptCounter()">Reset the form</button>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

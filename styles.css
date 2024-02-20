@@ -1,0 +1,221 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/pic6.png');
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Bradley hand';
+    padding: 0;
+    text-align: center;
+    font-style: bold;
+    font-size: 50px;
+    color:#69230c;
+}
+
+h2 {
+    font-family: 'Candara';
+    padding: 0;
+    text-align: center;
+    font-style: bold;
+    font-size: 20px;
+    color:#131313;
+}
+
+h3 {
+    font-family: 'Courier';
+    margin: 0 auto;
+    padding: 0;
+    font-style: bold;
+    font-size: 15px;
+    color: rgb(8, 7, 8);
+}
+
+h4 {
+    font-family: 'Candara';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(243, 33, 17);
+}
+
+h1, h2 {
+    margin: 0; /* Adjust the margin as needed */
+    padding: 0;
+}
+
+p {
+    font-family: 'Candara';
+    margin-top: 18px;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: justify;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(8, 7, 8);
+}
+
+.receipt-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-image: url(images/pic6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(216, 37, 37, 0.2);
+}
+
+img { 
+    width: 100px;
+    height: 100px;
+    margin-bottom: 100px;
+    padding: 10px ; 
+}
+
+/* Apply basic styles to the form */
+form {
+    max-width: 400px; /* Adjust the maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 100px; /* Add padding around the form elements */
+    /*background-color: #9f1212;  Set a light background color */
+    border-radius: 15px; /* Add rounded corners to the form */
+    border-width: 10px;
+    border-color: #07cb28;
+    box-shadow: 0 0 10px rgba(219, 8, 8, 0.1); /* Add a subtle shadow effect */
+    /* Add background image */
+    background-image: url('images/phone1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Style the form headings */
+form h2 {
+    margin-top: 0; /* Remove default margin from the top */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    color: #f4f0f0; /* Set the heading color */
+    text-align: center;
+}
+
+/* Style form labels */
+form label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; /* Add margin at the bottom */
+    margin-left: 5px;
+    color: #69230c; /* Set label color */
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS';
+}
+
+/* Style form inputs and textareas */
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form input[type="number"],
+form textarea {
+    width: 80%; /* Make inputs and textareas full width */
+    margin-left: 40px;
+    padding: 10px; /* Add padding inside inputs and textareas */
+    margin-bottom: 25px; /* Add margin at the bottom */
+    border: 20px solidrgb(2, 12, 35)c; /* Add a border */
+    border-style: double;
+    color: #69230c;
+    border-radius: 3px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Style form submit button */
+form button[type="button"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 150px;
+    margin: 0 auto; /* Make the button full width */
+    padding: 10px; /* Add padding */
+    background-color: #055e26; /* Set button background color */
+    color: #f8eec5; /* Set button text color */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+select {
+    margin-bottom: 20px;
+    margin-left: 50px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #daac16;
+    border-radius: 4px;
+    background-color: #faf4f4;
+    color: #69230c;
+    cursor: pointer;
+}
+
+/* Style for the dropdown arrow */
+select::after {
+    margin: auto;
+    content: '\25BC'; /* Unicode character for a downward arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none; /* Ensure that the arrow doesn't interfere with the select box */
+}
+
+/* Style for option items */
+select option {
+    background-color: #fff;
+    color: #69230c;
+}
+
+/* Style for the hover effect on options */
+select option:hover {
+    background-color: #14e781;
+}
+
+form button:hover {
+    background-color: #1148ee;
+}
+
+button:hover {
+    background-color: #065288;
+}
+
+
+button {
+    padding: 10px 20px; /* Adjust padding for spacing */
+    align-items: center;
+    margin-bottom: 10px; /* Adjust margin for spacing between buttons */
+    background-color: #056824; /* Set initial background color */
+    color: #fff; /* Set initial text color */
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generatedReceipt {
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 1px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Add background image */
+    background-image: url('images/pic8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
